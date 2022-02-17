@@ -18,8 +18,8 @@ bot.hears('/bot', async (ctx) => {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
       }
-         ctx.reply(number+"ку"+number2);
-      console.log(number);
+         ctx.reply(data.items.results[i]);
+      console.log(data.items.results[i]);
       
 
 
