@@ -18,13 +18,14 @@ bot.hears('/bot', async (ctx) => {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
       }
-         ctx.reply(number +"ку"+number2);
+         ctx.reply(number+"ку"+number2);
+      console.log(number);
       
 
 
    }
    function good() {
-      ctx.reply( "Вы запустили Бота на стратегию «Колесо» ⚠ Не забудьте поставить особые уведомления на Бота, и ждите сигнала на валуйные ситуации!");
+      ctx.reply( "Вы запустили Бота на стратегию «Кости» ⚠ Не забудьте поставить особые уведомления на Бота, и ждите сигнала на валуйные ситуации!");
        ctx.reply( "Удачи! По всем вопросам пишите @BetgamesTV_Admin"); 
       ctx.reply('Бот отслежки запущен!')
       global.time = setInterval(request2, 4000)
