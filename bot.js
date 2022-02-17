@@ -45,22 +45,20 @@ bot.hears('/bot', async (ctx) => {
          }
          
       }
-     if(total=7){
-     ctx.reply("7 бросков на красном больше 3 точек" + total);
+      console.log(total+" "+total2+" "+total_men+" "+total_men2)
+     if(total===7){
+     ctx.reply("7 бросков на красном больше 3 точек");
      }
-       if(total2=7){
-     ctx.reply("7 бросков на синем больше 3 точек"+ total2);
+       if(total2===7){
+     ctx.reply("7 бросков на синем больше 3 точек");
      }
-        if(total_men=7){
+        if(total_men===7){
      ctx.reply("7 бросков на синем меньше 4 точек");
      }
-        if(total_men2=7){
+        if(total_men2===7){
      ctx.reply("7 бросков на синем меньше 4 точек");
      }
-      if(res>0){
-         ctx.reply("Ничьи не было 30 бросков");
-      }
-
+   
 
    }
    function good() {
