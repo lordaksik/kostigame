@@ -67,7 +67,7 @@ bot.hears('/bot', async (ctx) => {
             win++;
          }
         if(number<number2){
-            win++;
+            win2++;
          }
       }
  if(win===5){
