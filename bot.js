@@ -13,14 +13,52 @@ bot.hears('/bot', async (ctx) => {
 
       const response = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/1/")
       const data = await response.json()
-      
+      var res=0,total=0;
+      var total2=0;
+      var total_men=0;
+      var total_men2=0;
       for (let i = 0; i <= 29; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
+         if(number===number2){
+            res++;
+         }
       }
-         ctx.reply(number);
-      console.log(number);
-      
+      if(res>0){
+         ctx.reply("Ничьи не было 30 бросков");
+      }
+      for (let i = 0; i <= 6; i++) {
+         number = data.items.results[i].results[0].number
+         number2 = data.items.results[i].results[1].number
+         if(number>3){
+            total++;
+         }
+         if(number<4){
+            total_men++;
+         }
+          if(number<4){
+            total_men2++;
+         }
+         if(number2>3){
+            total2++;
+         }
+         
+      }
+     if(total=7){
+     ctx.reply("7 бросков на красном больше 3 точек");
+     }
+       if(total2=7){
+     ctx.reply("7 бросков на синем больше 3 точек");
+     }
+        if(total_men=7){
+     ctx.reply("7 бросков на синем меньше 4 точек");
+     }
+        if(total_men2=7){
+     ctx.reply("7 бросков на синем меньше 4 точек");
+     }
+      if(res>0){
+         ctx.reply("Ничьи не было 30 бросков");
+      }
 
 
    }
@@ -28,7 +66,7 @@ bot.hears('/bot', async (ctx) => {
       ctx.reply( "Вы запустили Бота на стратегию «Кости» ⚠ Не забудьте поставить особые уведомления на Бота, и ждите сигнала на валуйные ситуации!");
        ctx.reply( "Удачи! По всем вопросам пишите @BetgamesTV_Admin"); 
       ctx.reply('Бот отслежки запущен!')
-      global.time = setInterval(request2, 4000)
+      global.time = setInterval(request2, 40000)
    }
    good()
 }
