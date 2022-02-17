@@ -30,6 +30,7 @@ bot.hears('/bot', async (ctx) => {
       for (let i = 0; i <= 6; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
+         console.log(number)
          if(number>3){
             total++;
          }
@@ -45,10 +46,10 @@ bot.hears('/bot', async (ctx) => {
          
       }
      if(total=7){
-     ctx.reply("7 бросков на красном больше 3 точек");
+     ctx.reply("7 бросков на красном больше 3 точек" + total);
      }
        if(total2=7){
-     ctx.reply("7 бросков на синем больше 3 точек");
+     ctx.reply("7 бросков на синем больше 3 точек"+ total2);
      }
         if(total_men=7){
      ctx.reply("7 бросков на синем меньше 4 точек");
