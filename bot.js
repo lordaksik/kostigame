@@ -24,13 +24,14 @@ bot.hears('/bot', async (ctx) => {
             res++;
          }
       }
-      if(res>0){
+      console.log(res)
+      if(res===30){
          ctx.reply("Ничьи не было 30 бросков");
       }
       for (let i = 0; i <= 6; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
-         console.log(number)
+         console.log(number+" "+number2)
          if(number>3){
             total++;
          }
