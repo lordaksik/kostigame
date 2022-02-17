@@ -11,15 +11,15 @@ bot.help((ctx) => ctx.reply('Напиши /bot '))
 bot.hears('/bot', async (ctx) => {
    async function request2() {
 
-      const response = await fetch("https://betgames9.betgames.tv/s/web/v1/game/results/testpartner?game_id=10&page=1&date=2022-02-17&timezone=0")
+      const response = await fetch("https://betgames9.betgames.tv/web/v2/games/results/testpartner/en/0/2020-27-07/10/1/")
       const data = await response.json()
       
       for (let i = 0; i <= 29; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
       }
-         ctx.reply(data.items.results[i]);
-      console.log(data.items.results[i]);
+         ctx.reply(data.items.results[i].results[0].number + "re" + data.items.results[i].results[1].number);
+      console.log(data.items.results[i].results[0].number);
       
 
 
