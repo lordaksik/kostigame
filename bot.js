@@ -60,7 +60,7 @@ bot.hears('/bot', async (ctx) => {
         if(total_men2===7){
      ctx.reply("7 бросков на СИНЕМ меньше 4 точек");
      }
-     for (let i = 0; i <= 4; i++) {
+     for (let i = 0; i <= 6; i++) {
          number = data.items.results[i].results[0].number
          number2 = data.items.results[i].results[1].number
          if(number>number2){
@@ -70,11 +70,11 @@ bot.hears('/bot', async (ctx) => {
             win2++;
          }
       }
- if(win===5){
-     ctx.reply("КРАСНЫЙ победил 5 раз подряд");
+ if(win===7){
+     ctx.reply("КРАСНЫЙ победил 7 раз подряд");
      }
-       if(win2===5){
-     ctx.reply("СИНИЙ победил 5 раз подряд");
+       if(win2===7){
+     ctx.reply("СИНИЙ победил 7 раз подряд");
      }
    }
    function good() {
