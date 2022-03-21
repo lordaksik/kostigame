@@ -26,7 +26,7 @@ bot.hears('/bot', async (ctx) => {
          }
       }
       console.log(res)
-      if(res===30){
+      if(res===0){
          ctx.reply("Ничьи не было 30 бросков");
       }
       for (let i = 0; i <= 6; i++) {
